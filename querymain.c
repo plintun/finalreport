@@ -214,3 +214,18 @@ int main(void) {
             show_stats_for_range(conn, start, end);
         }
 
+        // Option 5: Exit the program
+        else if (choice == 5) {
+            break;
+        }
+
+        // Handle invalid input
+        else {
+            printf("Invalid choice. Try again.\n");
+        }
+    }
+
+    // Close MySQL connection
+    mysql_close(conn);
+    return 0;
+}
